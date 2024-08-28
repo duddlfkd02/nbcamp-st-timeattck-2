@@ -1,4 +1,8 @@
-const Dashboard = ({ selectedPokemon, onRemove }) => {
+import { useContext } from "react";
+import { PokemonContext } from "../pages/Dex";
+
+const Dashboard = () => {
+  const { selectedPokemon, onRemove } = useContext(PokemonContext);
   return (
     <div>
       <h2>포켓몬</h2>

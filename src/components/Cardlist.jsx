@@ -1,6 +1,9 @@
 import PokeCard from "./PokeCard";
+import { useContext } from "react";
+import { PokemonContext } from "../pages/Dex";
 
-const Cardlist = ({ pokeList, onAdd }) => {
+const Cardlist = ({ pokeList }) => {
+  const { onAdd } = useContext(PokemonContext);
   return (
     <div>
       {pokeList.map((pokemon) => {

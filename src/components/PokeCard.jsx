@@ -1,7 +1,10 @@
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { PokemonContext } from "../pages/Dex";
 import styled from "styled-components";
 
-const PokeCard = ({ onAdd, onRemove, pokemon, isSelected }) => {
+const PokeCard = ({ pokemon, isSelected }) => {
+  const { onAdd, onRemove } = useContext(PokemonContext);
   const { img_url, korean_name, id } = pokemon;
   const navigate = useNavigate();
   return (
